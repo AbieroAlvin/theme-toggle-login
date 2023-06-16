@@ -1,0 +1,65 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: 0;
+  }
+
+  :root {
+    --background: #fff;
+    --text-primary: #000;
+    --text-secondary: #8e05c2;
+    --accent: #8e05c2;
+    --border: #333;
+    --form-bg: #fff;
+  }
+
+  [data-theme="dark"] {
+    --background: #000;
+    --text-primary: #fff;
+    --text-secondary: #8e05c2;
+    --accent: #8e05c2;
+    --border: #808080;
+    --form-bg: #191919;
+  }
+
+  label {
+    margin: 8px 0;
+    font-weight: 600;
+  }
+
+  input {
+    padding: 8px;
+    margin-bottom: 8px;
+    border-radius: 6px;
+    border: 1px solid var(--border);
+    background: var(--background);
+    color: var(--text-primary);
+  }
+
+  .top ion-icon {
+    font-size: 1rem;
+  }
+
+  .login h1 {
+    margin: -6rem 0 2rem;
+  }
+
+  .theme-toggle ion-icon {
+    cursor: pointer;
+  }
+
+  a {
+    color: var(--text-secondary);
+  }
+
+  @media screen and (max-width: 478px) {
+    .login {
+      width: 95%;
+    }
+  }
+}
